@@ -1,9 +1,28 @@
+import java.util.*;
+class AgeDoesNotFitException extends Exception{
+String msg;
+AgeDoesNotFitException(String msg){
+super(msg);
+this.msg=msg;
+}
+@Override
+public String toString(){
+return msg;
+}
+}
 class Main{
 public static void main(String args[]){
-int[] age={12,4,5};
-System.out.println("using for-each loop:");
-for(int a : age){
-System.out.println(a);
+Scanner sc=new Scanner(System.in);
+int age=sc.nextInt();
+try{
+if(age<18){
+throw new AgeDoesNotFitException("Entered age doesnot fulfill the required age limit");
+}
+}
+catch(AgeDoesNotFitException ex){
+System.out.println(ex);
+System.out.println(ex.getMessage());
 }
 }
 }
+
