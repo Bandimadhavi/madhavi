@@ -1,19 +1,14 @@
 class Person{
-int id;
-String name;
-Person(int id,String name){
-this.id=id;
-this.name=name;
+protected String fname="John";
+protected String lname="Doe";
+protected int age=24;
 }
-}
-class Emp extends Person{
-float salary;
-Emp(int id,String name,float salary){
-super(id,name);
-this.salary=salary;
-}
-void display(){System.out.println(id+" "+name+" "+salary);}
-}
-}
+class Student extends Person{
+private int graduationYear=2018;
 public static void main(String args[]){
+Student myObj=new Student();
+System.out.println("Name:"+myObj.fname+" "+myObj.lname);
+System.out.println("Age:"+myObj.age);
+System.out.println("Graduation Year:"+myObj.graduationYear);
+}
 }

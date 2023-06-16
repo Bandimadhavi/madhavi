@@ -1,19 +1,11 @@
-class B{
-A obj;
-B(A obj){
-this.obj=obj;
+interface printable{
+void print();
 }
-void display(){
-System.out.println(obj.data);
-}
-}
-class A{
-int data=10;
-A(){
-B b=new B(this);
-b.display();
-}
+class A implements printable{
+public void print(){System.out.println("Hello");}
 public static void main(String args[]){
-A a=new A();
+A obj=new A();
+obj.print();
 }
 }
+

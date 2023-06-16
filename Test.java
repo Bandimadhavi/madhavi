@@ -1,25 +1,7 @@
-class ChildThread extends Thread
-{
-public void run()
-{
-for(int i=1;i<=4;i++)
-{
-try{
-Thread.sleep(500);
-} 
-catch(Exception e){
-System.out.println(e);
-}
-System.out.println("child thread execution-"+i);
-}
-}
-}
+import p1.CSE;
 class Test{
-public static void main(String args[])throws Exception{
-ChildThread th1=new ChildThread();
-th1.start();
-th1.join();
-System.out.println("main thread completed");
+public static void main(String args[]){
+CSE ob=new CSE();
+ob.Madhavi();
 }
 }
-

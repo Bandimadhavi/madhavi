@@ -1,10 +1,16 @@
-import java.util.*;
-public class Test2{
+class Student{
+public int id;
+public String name;
+public void display(){
+System.out.println(this.id+" "+this.name);
+}
+}
+class Test2{
 public static void main(String args[]){
-StringTokenizer st=new StringTokenizer("my,name,is,madhavi");
-System.out.println("Next token is:"+st.nextToken(","));
-System.out.println("Next token is:"+st.nextToken(","));
-System.out.println("Next token is:"+st.nextToken(","));
-System.out.println("Next token is:"+st.nextToken(","));
+Student ob=new Student();
+ob.display();
+ob.id=25841;
+ob.name="Madhavi";
+ob.display();
 }
 }

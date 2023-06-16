@@ -1,28 +1,14 @@
-import java.util.*;
-class AgeDoesNotFitException extends Exception{
-String msg;
-AgeDoesNotFitException(String msg){
-super(msg);
-this.msg=msg;
-}
-@Override
-public String toString(){
-return msg;
-}
-}
 class Main{
 public static void main(String args[]){
-Scanner sc=new Scanner(System.in);
-int age=sc.nextInt();
 try{
-if(age<18){
-throw new AgeDoesNotFitException("Entered age doesnot fulfill the required age limit");
+int arr[]={1,2,3,4,5};
+System.out.println(arr[10]);
+}
+catch(ArrayIndexOutOfBoundsException e){
+System.out.println("ArrayIndexOutOfBoundsException");
+}
+finally{
+System.out.println("finally block");
 }
 }
-catch(AgeDoesNotFitException ex){
-System.out.println(ex);
-System.out.println(ex.getMessage());
 }
-}
-}
-
